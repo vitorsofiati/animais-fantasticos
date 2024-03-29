@@ -5,8 +5,8 @@ export default class DropdownMenu {
 		this.dropdownMenus = document.querySelectorAll(dropdownMenus);
 		this.activeClass = 'active';
 
-		// Define  e click como argumento padrão de events, caso o usuário não defina
-		if (events === undefined) this.events = ['touchstart', 'click'];
+		// Define click como argumento padrão de events, caso o usuário não defina
+		if (events === undefined) this.events = ['click'];
 		else this.events = events;
 
 		this.activeDropdownMenu = this.activeDropdownMenu.bind(this);
