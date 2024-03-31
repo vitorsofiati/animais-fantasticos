@@ -58,9 +58,9 @@ export class Slide {
 	}
 
 	changeSlideOnEnd() {
-		if (this.dist.movement > 120 && this.index.next !== undefined) {
+		if (this.dist.movement > 160 && this.index.next !== undefined) {
 			this.activeNextSlide();
-		} else if (this.dist.movement < -120 && this.index.prev !== undefined) {
+		} else if (this.dist.movement < -160 && this.index.prev !== undefined) {
 			this.activePrevSlide();
 		} else {
 			this.changeSlide(this.index.active);
@@ -129,7 +129,7 @@ export class Slide {
 		setTimeout(() => {
 			this.slidesConfig();
 			this.changeSlide(this.index.active);
-		}, 600);
+		}, 200);
 	}
 
 	addResizeEvent() {
