@@ -1,0 +1,69 @@
+.galeria {
+  grid-column: 1/-1;
+}
+
+.slide-wrapper {
+  grid-column: 1/-1;
+  overflow: hidden;
+}
+
+.slide {
+  display: flex;
+}
+
+.slide:hover {
+  /* "avisa" o browser que o transforme vai mudar. melhor para fins de performance */
+  will-change: transform;
+}
+
+.slide li {
+  flex-shrink: 0;
+  width: 80vw;
+  max-width: 800px;
+  margin: 0 20px;
+
+  border-radius: 4px;
+  overflow: hidden;
+  opacity: .9;
+  transform: scale(.8);
+  transition: .4s;
+  box-shadow: inset 20px 20px 10px 5px rgba(0, 0, 0, .5), inset -20px -20px 10px 5px rgba(0, 0, 0, .5);
+}
+
+.slide li.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide li img {
+  opacity: .9;
+}
+
+.slide li.active img {
+  opacity: 1;
+}
+
+.custom-controls{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-column: 1/-1;
+}
+
+.custom-controls li {
+  opacity: .8;
+  transform:scale(.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+  transition: .3s;
+  cursor: pointer;
+}
+
+.custom-controls li.active {
+  opacity: 1;
+  transform:scale(1);
+}
